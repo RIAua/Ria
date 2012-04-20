@@ -25,9 +25,10 @@ namespace Ria {
             return self::$_instance;
         }
 
-//        public function __construct() {
+        public function __construct() {
+            $this->setHeader('Content-Type', 'application/json');
 //            $this->_request_headers_arr = \http_get_request_headers();
-//        }
+        }
         /**
          * get headers list
          * @return array
