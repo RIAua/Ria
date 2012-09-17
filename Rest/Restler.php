@@ -48,8 +48,10 @@ namespace Ria\Rest {
 
             $found = false;
             $this->request_data += $_GET;
-            $params = array('request_data' => $this->request_data);
-            $params = array('request_range_items' => $this->request_range_items);
+            $params = array(
+                    'request_data' => $this->request_data
+                    'request_range_items' => $this->request_range_items
+            );
             $params += $this->request_data;
             $lc = strtolower($this->url);
             foreach ($urls as $url => $call) {
